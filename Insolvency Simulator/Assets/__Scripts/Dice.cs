@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Dice : MonoBehaviour
 {
 
-    private int Roll()
+    public int Roll()
     {
         int MIN = 1;
         int MAX = 6;
