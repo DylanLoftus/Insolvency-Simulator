@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
 {
     public int[] DiceValues;
     public int DiceTotal;
+
+    public Sprite[] DiceImages;
 
     private void Start()
     {
@@ -27,6 +30,27 @@ public class Dice : MonoBehaviour
         {
             DiceValues[i] = Random.Range(1, 7);
             DiceTotal += DiceValues[i];
+            switch (DiceValues[i])
+            {
+                case 1:
+                    transform.GetChild(i).GetComponent<Image>().sprite = DiceImages[0];
+                    break;
+                case 2:
+                    transform.GetChild(i).GetComponent<Image>().sprite = DiceImages[1];
+                    break;
+                case 3:
+                    transform.GetChild(i).GetComponent<Image>().sprite = DiceImages[2];
+                    break;
+                case 4:
+                    transform.GetChild(i).GetComponent<Image>().sprite = DiceImages[3];
+                    break;
+                case 5:
+                    transform.GetChild(i).GetComponent<Image>().sprite = DiceImages[4];
+                    break;
+                case 6:
+                    transform.GetChild(i).GetComponent<Image>().sprite = DiceImages[5];
+                    break;
+            }
         }
 
         Debug.Log("Rolled: " + DiceTotal);
