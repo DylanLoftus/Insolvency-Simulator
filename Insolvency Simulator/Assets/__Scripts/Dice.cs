@@ -2,42 +2,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
 {
+    public int[] DiceValues;
+    public int DiceTotal;
 
-    public int Roll()
+    private void Start()
     {
-        int MIN = 1;
-        int MAX = 6;
-        int d1, d2;
-        int rollNumber;
-
-        System.Random rndm = new System.Random();
-
-        d1 = rndm.Next(MIN, MAX);
-        d2 = rndm.Next(MIN, MAX);
-
-        CheckDoubleRoll(d1, d2);
-
-        rollNumber = d1 + d2;
-
-        return rollNumber;
+        DiceValues = new int[2];
     }
 
-    private bool CheckDoubleRoll(int d1, int d2)
+    private void Update()
     {
-        bool doubleJump;
+        
+    }
 
-        if (d1.Equals(d2))
+    public void RollDice()
+    {
+        DiceTotal = 0;
+
+        for (int i = 0; i < DiceValues.Length; i++)
         {
-            doubleJump = true;
-        }
-        else
-        {
-            doubleJump = false;
+            DiceValues[i] = Random.Range(1, 7);
+            DiceTotal += DiceValues[i];
         }
 
-        return doubleJump;
+        Debug.Log("Rolled: " + DiceTotal);
     }
 }
