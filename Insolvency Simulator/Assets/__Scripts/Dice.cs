@@ -12,6 +12,8 @@ public class Dice : MonoBehaviour
 
     public Sprite[] DiceImages;
 
+    public bool IsDoneRolling = false;
+
     private void Start()
     {
         DiceValues = new int[2];
@@ -53,6 +55,17 @@ public class Dice : MonoBehaviour
             }
         }
 
+        IsDoneRolling = true;
         Debug.Log("Rolled: " + DiceTotal);
+
+        Player player;
+        player = GameObject.FindObjectOfType<Player>();
+        player.Move();
+        //NewTurn();
+    }
+ 
+    public void NewTurn()
+    {
+        IsDoneRolling = false;
     }
 }
