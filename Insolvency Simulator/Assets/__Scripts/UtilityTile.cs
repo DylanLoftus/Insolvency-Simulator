@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Property : MonoBehaviour
+public class UtilityTile : MonoBehaviour
 {
     [SerializeField]
-    private string propertyName;
+    private string utilityName;
     [SerializeField]
-    private int propertyFaceValue;
-    [SerializeField]
-    private int houseCost;
-    [SerializeField]
-    private bool isOwned = false;
+    private int utilityPrice;
 
     // Start is called before the first frame update
     void Start()

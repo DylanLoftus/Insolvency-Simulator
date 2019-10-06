@@ -2,16 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Property : MonoBehaviour
+public class TaxTile : MonoBehaviour
 {
     [SerializeField]
-    private string propertyName;
-    [SerializeField]
-    private int propertyFaceValue;
-    [SerializeField]
-    private int houseCost;
-    [SerializeField]
-    private bool isOwned = false;
+    private int taxAmmount;
 
     // Start is called before the first frame update
     void Start()
