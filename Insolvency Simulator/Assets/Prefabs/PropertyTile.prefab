@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6567938358117011783}
   - component: {fileID: 3303332425917740881}
+  - component: {fileID: 8441927297638098201}
+  - component: {fileID: 6260340352889358768}
   m_Layer: 0
   m_Name: PropertyTile
   m_TagString: Untagged
@@ -43,6 +45,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102812b9337d25c45bb53eb98465780f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propertyName: 
-  propertyFaceValue: 0
-  houseCost: 0
+  propertyName: Bohermore
+  propertyFaceValue: 60
+  houseCost: 50
+  isOwned: 0
+--- !u!114 &8441927297638098201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8441927297638098200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextTiles:
+  - {fileID: 0}
+--- !u!65 &6260340352889358768
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8441927297638098200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
