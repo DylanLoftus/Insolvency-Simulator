@@ -61,7 +61,7 @@ public class Dice : MonoBehaviour
         Player player;
         player = GameObject.FindObjectOfType<Player>();
         player.Move();
-        //NewTurn();
+        NewTurn();
     }
  
     public void NewTurn()

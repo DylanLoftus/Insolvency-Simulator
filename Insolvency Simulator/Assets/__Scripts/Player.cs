@@ -5,8 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Tile StartTile;
+    [SerializeField]
+    private int playerNumber;
     Tile currentTile;
     Dice dice;
+    private int turn = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +26,7 @@ public class Player : MonoBehaviour
 
     public void Move()
     {
-        
+
         if (dice.IsDoneRolling == false)
         {
             // Do not move
@@ -49,5 +52,6 @@ public class Player : MonoBehaviour
         this.transform.position = finalTile.transform.position;
 
         currentTile = finalTile;
+
     }
 }
