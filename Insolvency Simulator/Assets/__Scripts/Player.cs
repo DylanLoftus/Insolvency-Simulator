@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public bool isInJail = false;
     public int jailTurn = 0;
     public int money = 1500;
+    private int doubleCount = 0;
     Tile currentTile;
     GameManager theGameManager;
 
@@ -69,7 +70,16 @@ public class Player : MonoBehaviour
             MoveSpaces();
             if(theGameManager.doubleRoll == true)
             {
-                theGameManager.RollAgain();
+                if (doubleCount == 3)
+                {
+                    this.transform.position = GameObject.FindGameObjectWithTag("Jail").transform.position;
+                    isInJail = true;
+                }
+                else
+                {
+                    doubleCount++;
+                    theGameManager.RollAgain();
+                }
             }
         }
     }
