@@ -2226,7 +2226,7 @@ GameObject:
   - component: {fileID: 801549379}
   m_Layer: 0
   m_Name: JailTile
-  m_TagString: Untagged
+  m_TagString: Jail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4183,16 +4183,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1762397242056227104, guid: abfe547b729a8b341ac22ff070187cb3,
-        type: 3}
-      propertyPath: utilityName
-      value: ISP
-      objectReference: {fileID: 0}
     - target: {fileID: 1918540441954523914, guid: abfe547b729a8b341ac22ff070187cb3,
         type: 3}
       propertyPath: NextTiles.Array.data[0]
       value: 
       objectReference: {fileID: 1603658042}
+    - target: {fileID: 1762397242056227104, guid: abfe547b729a8b341ac22ff070187cb3,
+        type: 3}
+      propertyPath: utilityName
+      value: ISP
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abfe547b729a8b341ac22ff070187cb3, type: 3}
 --- !u!1 &1786115107 stripped
