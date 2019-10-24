@@ -1821,12 +1821,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 3914875b79dba7c4f9778bc8abf661a2, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1984062743}
+        m_MethodName: NewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2626,6 +2626,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984062741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f49e973413af4a4489952df72210ce1, type: 3}
+  m_Script: {fileID: 11500000, guid: d1e1977395109dc46b42c9919040d546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
