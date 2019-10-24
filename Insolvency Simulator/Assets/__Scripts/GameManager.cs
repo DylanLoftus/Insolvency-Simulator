@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     // NOT IN USE YET.
     //public bool IsDoneInteraction = false;
 
+    public bool doubleRoll = false;
+
 
 
     // Start is called before the first frame update
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
                                 if (players.PlayerID == playerID)
                                 {
                                     players.money += currentProperty.propertyFaceValue;
+                                    Debug.Log("Payed Player: " + players.PlayerID + 1);
                                 }
                             }
 
@@ -107,7 +110,8 @@ public class GameManager : MonoBehaviour
                         {
                             Debug.Log("This property is not owned.");
                             player.money -= currentProperty.propertyFaceValue;
-                            Debug.Log(CurrentPlayerMoney);
+                            Debug.Log("Paid :" + currentProperty.propertyFaceValue);
+                            Debug.Log("You now have: " + player.money);
                             currentProperty.isOwned = true;
                             currentProperty.playerID = CurrentPlayerID;
                         }
@@ -115,29 +119,56 @@ public class GameManager : MonoBehaviour
                     case "Community":
                         break;
                     case "Tax":
+                        Debug.Log("You've landed on a tax tile.");
                         player.money -= 200;
+                        Debug.Log("You've paid 200 to the bank.");
+                        Debug.Log("You now have: " + player.money);
                         break;
                     case "Railroad":
                         break;
                     case "Chance":
                         break;
                     case "Jail":
+                        if (player.isInJail)
+                        {
+                            if(player.jailTurn == 3)
+                            {
+                                player.isInJail = false;
+                            }
+
+                            // Do jail logic
+                            if (doubleRoll)
+                            {
+                                player.isInJail = false;
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("Just visiting :D.");
+                        }
                         break;
                     case "Utility":
                         break;
                     case "Free Parking":
+                        Debug.Log("Nothing happens here.");
                         break;
                     case "Go To Jail":
+                        Debug.Log("You've landed on the GO TO JAIL tile.");
                         player.transform.position = GameObject.FindGameObjectWithTag("Jail").transform.position;
+                        Debug.Log("Moved to Jail.");
                         break;
                     case "LuxTax":
+                        Debug.Log("You've landed on a luxary tax tile.");
                         player.money -= 75;
+                        Debug.Log("You've paid 75 to the bank.");
+                        Debug.Log("You now have: " + player.money);
                         break;
                 }
             }
         }
     }
 
+    // This method checks the ammount of money a player has.
     public void CheckPlayerMoney()
     {
         Player[] playerArray = GameObject.FindObjectsOfType<Player>();

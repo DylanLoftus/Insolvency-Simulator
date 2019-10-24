@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     // Instance variables.
     public Tile StartTile;
     public int PlayerID;
+    public bool isInJail = false;
+    public int jailTurn = 0;
     public int money = 1500;
     Tile currentTile;
     GameManager theGameManager;
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
     // Handles player movement.
     public void Move()
     {
+
         // Check to see if it's our turn.
         if (theGameManager.CurrentPlayerID != PlayerID)
         {
@@ -49,6 +52,26 @@ public class Player : MonoBehaviour
             return;
         }
 
+        // Check to see if in jail.
+        if (isInJail)
+        {
+            if(theGameManager.doubleRoll == true || jailTurn == 3)
+            {
+                MoveSpaces();
+            }
+            else
+            {
+                jailTurn++;
+            }
+        }
+        else
+        {
+            MoveSpaces();
+        }
+    }
+
+    private void MoveSpaces()
+    {
         // How many space we have to move.
         int spacesToMove = theGameManager.DiceTotal;
         Tile finalTile = currentTile;

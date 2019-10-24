@@ -75,6 +75,10 @@ public class Dice : MonoBehaviour
         }
 
         // Rolling the dice is done at this point. Put the player's turn has not finished yet...
+        if (DiceValues[0].Equals(DiceValues[1]))
+        {
+            theGameManager.doubleRoll = true;
+        }
         theGameManager.IsDoneRolling = true;
         Debug.Log("Rolled: " + theGameManager.DiceTotal);
 
