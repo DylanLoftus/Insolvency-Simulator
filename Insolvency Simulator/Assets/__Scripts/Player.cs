@@ -67,6 +67,10 @@ public class Player : MonoBehaviour
         else
         {
             MoveSpaces();
+            if(theGameManager.doubleRoll == true)
+            {
+                theGameManager.RollAgain();
+            }
         }
     }
 

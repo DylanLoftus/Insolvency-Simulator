@@ -56,6 +56,14 @@ public class GameManager : MonoBehaviour
         //IsDoneInteraction = false;
     }
 
+    public void RollAgain()
+    {
+        Debug.Log("Rolled a Double! Roll again!");
+        IsDoneRolling = false;
+        IsDoneMoving = false;
+        //IsDoneAnimating = false;
+    }
+
     public void CheckCorrectPlayer()
     {
         Player[] playerArray = GameObject.FindObjectsOfType<Player>();
