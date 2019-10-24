@@ -33,9 +33,6 @@ public class Player : MonoBehaviour
         // Check to see if it's our turn.
         if (theGameManager.CurrentPlayerID != PlayerID)
         {
-            Debug.Log(theGameManager.CurrentPlayerID);
-            Debug.Log(PlayerID);
-            Debug.Log("Not my turn");
             // It's not our turn yet!
             return;
         }
@@ -51,9 +48,6 @@ public class Player : MonoBehaviour
             // We've already done a move
             return;
         }
-
-        Debug.Log("Beginning to move player " + theGameManager.CurrentPlayerID);
-
 
         // How many space we have to move.
         int spacesToMove = theGameManager.DiceTotal;
@@ -76,6 +70,5 @@ public class Player : MonoBehaviour
 
         currentTile = finalTile;
         theGameManager.IsDoneMoving = true;
-        Debug.Log("Moved player " + theGameManager.CurrentPlayerID);
     }
 }

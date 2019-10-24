@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int CurrentPlayerID = 0;
+    public int CurrentPlayerMoney;
     public int DiceTotal;
 
     public int NumberOfPlayers = 3;
@@ -22,7 +23,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CheckPlayerMoney();
         Debug.Log("Current player is: " + CurrentPlayerID);
+        Debug.Log(CurrentPlayerMoney);
     }
 
     // Update is called once per frame
@@ -31,15 +34,17 @@ public class GameManager : MonoBehaviour
         // If all are true.
         if(IsDoneRolling && IsDoneMoving)
         {
-            Debug.Log("Turn completed!");
             // We have finished the turn.
             CurrentPlayerID++;
+            Debug.Log(CurrentPlayerMoney);
             NewTurn();
         }
     }
 
     public void NewTurn()
     {
+        CheckPlayerMoney();
+
         if (CurrentPlayerID > 2)
         {
             CurrentPlayerID = 0;
@@ -126,6 +131,19 @@ public class GameManager : MonoBehaviour
                         player.money -= 75;
                         break;
                 }
+            }
+        }
+    }
+
+    public void CheckPlayerMoney()
+    {
+        Player[] playerArray = GameObject.FindObjectsOfType<Player>();
+
+        foreach (Player player in playerArray)
+        {
+            if (player.PlayerID == CurrentPlayerID)
+            {
+                CurrentPlayerMoney = player.money;
             }
         }
     }
