@@ -59,6 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 0}
+  tileType: Chance
 --- !u!65 &5294008936161572705
 BoxCollider:
   m_ObjectHideFlags: 0

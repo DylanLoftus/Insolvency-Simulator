@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 0}
+  tileType: Property
 --- !u!65 &6260340352889358768
 BoxCollider:
   m_ObjectHideFlags: 0

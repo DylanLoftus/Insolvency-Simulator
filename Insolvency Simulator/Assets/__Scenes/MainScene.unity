@@ -194,6 +194,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1152759284}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &13629827
@@ -278,6 +283,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1918540441954523914}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &70461566
@@ -374,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartTile: {fileID: 260898596}
   PlayerID: 1
-  startMoney: 1500
+  money: 1500
 --- !u!1001 &141360209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -457,6 +467,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1503785729}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &168310414
@@ -541,6 +556,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1085938788}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &180107547
@@ -739,6 +759,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9006134945959317507, guid: f2de1cceb54064e4fa6cbef3cc415b13,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 855461726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2de1cceb54064e4fa6cbef3cc415b13, type: 3}
 --- !u!1 &183229128 stripped
@@ -767,6 +792,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1152759283}
+  tileType: 
+--- !u!114 &183229132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 528015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183229128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &191150019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 454072130269874464, guid: bf969a561555abb43aa75f06e503a885,
@@ -793,6 +831,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 676825463}
+  tileType: 
+--- !u!114 &191150023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 454072130269874465, guid: bf969a561555abb43aa75f06e503a885,
+    type: 3}
+  m_PrefabInstance: {fileID: 555000163}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191150019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260898594
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 8441927297638098201}
+  tileType: Go
 --- !u!65 &260898597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -878,6 +930,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1257062156}
+  tileType: 
+--- !u!114 &262618698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 2086826849}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262618694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &291738932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -904,6 +969,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1503785728}
+  tileType: 
+--- !u!114 &291738936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 141360209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291738932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &303322657 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9006134945959317506, guid: f2de1cceb54064e4fa6cbef3cc415b13,
@@ -930,6 +1008,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 855461725}
+  tileType: 
+--- !u!114 &303322661 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9006134945959317507, guid: f2de1cceb54064e4fa6cbef3cc415b13,
+    type: 3}
+  m_PrefabInstance: {fileID: 182292155}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303322657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &310162269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -997,6 +1088,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1323465991068991840, guid: 36f453e3d5e92004aa32f320033193a1,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 2108850757}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f453e3d5e92004aa32f320033193a1, type: 3}
 --- !u!1001 &324689329
@@ -1081,6 +1177,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 191150023}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &366423880
@@ -1175,6 +1276,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 262618697}
+  tileType: 
+--- !u!114 &420247332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1235104782412309619, guid: 2739a6359b9790a4fab978ecbda9230f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2011199642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420247328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &433057334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1257,6 +1371,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1584976423}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &474410695
@@ -1359,6 +1478,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 801549378}
+  tileType: 
+--- !u!114 &490633091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 611025733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490633087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &499850780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1441,6 +1573,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 260898596}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &519420028
@@ -1607,6 +1744,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 291738936}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &555000163
@@ -1675,6 +1817,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454072130269874465, guid: bf969a561555abb43aa75f06e503a885,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 676825464}
+    - target: {fileID: 454072130269874465, guid: bf969a561555abb43aa75f06e503a885,
+        type: 3}
+      propertyPath: tileType
+      value: LuxTax
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf969a561555abb43aa75f06e503a885, type: 3}
@@ -1745,6 +1897,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235104782412309619, guid: 2739a6359b9790a4fab978ecbda9230f,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1786115111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2739a6359b9790a4fab978ecbda9230f, type: 3}
 --- !u!1001 &568629429
@@ -1829,6 +1986,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 2095766122}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &611025733
@@ -1913,6 +2075,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 801549378}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &676825460 stripped
@@ -1941,6 +2108,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 260898596}
+  tileType: 
+--- !u!114 &676825464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 499850780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676825460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731542921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,6 +2259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 2015481509}
+  tileType: Jail
 --- !u!65 &801549379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2186,7 +2367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartTile: {fileID: 260898596}
   PlayerID: 0
-  startMoney: 1500
+  money: 1500
 --- !u!1 &838541183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -2213,6 +2394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 490633090}
+  tileType: 
 --- !u!1 &855461722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -2239,6 +2421,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1064026158}
+  tileType: 
+--- !u!114 &855461726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 2024468368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855461722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &912695344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,6 +2539,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1818029979}
+  tileType: 
+--- !u!114 &914664841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 1180464179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914664837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &968594638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -2370,6 +2578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 454072130269874465}
+  tileType: 
 --- !u!1 &1044609662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,6 +2637,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1786115110}
+  tileType: 
+--- !u!114 &1064026159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1235104782412309619, guid: 2739a6359b9790a4fab978ecbda9230f,
+    type: 3}
+  m_PrefabInstance: {fileID: 558417356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064026155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1075108559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,6 +2696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1621840602}
+  tileType: Go To Jail
 --- !u!65 &1075108562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2519,7 +2742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartTile: {fileID: 260898596}
   PlayerID: 2
-  startMoney: 1500
+  money: 1500
 --- !u!212 &1079517487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2608,6 +2831,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1827009965}
+  tileType: 
+--- !u!114 &1085938788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1323465991068991840, guid: 36f453e3d5e92004aa32f320033193a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2057104026}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085938784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1146366106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2690,6 +2926,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 490633091}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &1148555226 stripped
@@ -2718,6 +2959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1085938787}
+  tileType: 
 --- !u!1 &1152759280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9006134945959317506, guid: f2de1cceb54064e4fa6cbef3cc415b13,
@@ -2744,6 +2986,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 914664840}
+  tileType: 
+--- !u!114 &1152759284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9006134945959317507, guid: f2de1cceb54064e4fa6cbef3cc415b13,
+    type: 3}
+  m_PrefabInstance: {fileID: 1959803857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152759280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1180464179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2826,6 +3081,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1818029980}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &1220425343
@@ -2989,6 +3249,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 420247332}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &1257062153 stripped
@@ -3017,6 +3282,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1320343974}
+  tileType: 
+--- !u!114 &1257062157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 1569998636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257062153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1320343971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1918540441954523913, guid: abfe547b729a8b341ac22ff070187cb3,
@@ -3043,6 +3321,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1603658041}
+  tileType: 
+--- !u!114 &1320343975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1918540441954523914, guid: abfe547b729a8b341ac22ff070187cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1779677097}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320343971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1327414514
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,6 +3434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1323465991068991840}
+  tileType: 
 --- !u!1 &1465168404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,6 +3509,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 183229131}
+  tileType: 
+--- !u!114 &1503785729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1235104782412309619, guid: 2739a6359b9790a4fab978ecbda9230f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1845143100}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503785725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1569998636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3299,6 +3604,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1320343975}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &1584976419 stripped
@@ -3327,6 +3637,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 303322660}
+  tileType: 
+--- !u!114 &1584976423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 1884378688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584976419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1589849346
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,6 +3857,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1075108561}
+  tileType: 
+--- !u!114 &1603658042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 2068080332}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603658038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621840599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -3560,6 +3896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1584976422}
+  tileType: 
 --- !u!1 &1638821231 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -3586,6 +3923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 291738935}
+  tileType: 
 --- !u!1001 &1667124765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3668,6 +4006,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1881438344}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &1774596098
@@ -3752,6 +4095,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 454072130269874465}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &1779677097
@@ -3826,6 +4174,11 @@ PrefabInstance:
       propertyPath: utilityName
       value: ISP
       objectReference: {fileID: 0}
+    - target: {fileID: 1918540441954523914, guid: abfe547b729a8b341ac22ff070187cb3,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1603658042}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abfe547b729a8b341ac22ff070187cb3, type: 3}
 --- !u!1 &1786115107 stripped
@@ -3854,6 +4207,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 2108850756}
+  tileType: 
+--- !u!114 &1786115111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1323465991068991840, guid: 36f453e3d5e92004aa32f320033193a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 310162269}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786115107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1795356317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3950,6 +4316,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1881438344}
+  tileType: 
+--- !u!114 &1818029980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 1667124765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818029976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1827009962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -3976,6 +4355,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 2095766121}
+  tileType: 
+--- !u!114 &1827009966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 568629429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827009962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1845143100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4043,6 +4435,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235104782412309619, guid: 2739a6359b9790a4fab978ecbda9230f,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 183229132}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2739a6359b9790a4fab978ecbda9230f, type: 3}
 --- !u!1 &1845355449
@@ -4214,6 +4611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1148555229}
+  tileType: Free Parking
 --- !u!65 &1881438345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4309,6 +4707,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 303322661}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &1896527487
@@ -4393,6 +4796,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1323465991068991840}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &1959803857
@@ -4462,6 +4870,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9006134945959317507, guid: f2de1cceb54064e4fa6cbef3cc415b13,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 914664841}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2de1cceb54064e4fa6cbef3cc415b13, type: 3}
 --- !u!1 &1963653207
@@ -4610,6 +5023,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1235104782412309619, guid: 2739a6359b9790a4fab978ecbda9230f,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 262618698}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2739a6359b9790a4fab978ecbda9230f, type: 3}
 --- !u!1 &2015481506 stripped
@@ -4638,6 +5056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 1918540441954523914}
+  tileType: 
 --- !u!1001 &2024468368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4720,6 +5139,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1064026159}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &2057104026
@@ -4789,6 +5213,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1323465991068991840, guid: 36f453e3d5e92004aa32f320033193a1,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1827009966}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f453e3d5e92004aa32f320033193a1, type: 3}
 --- !u!1001 &2068080332
@@ -4873,6 +5302,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1075108561}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1001 &2086826849
@@ -4957,6 +5391,11 @@ PrefabInstance:
       propertyPath: houseCost
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+        type: 3}
+      propertyPath: NextTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1257062157}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
 --- !u!1 &2095766118 stripped
@@ -4985,6 +5424,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 420247331}
+  tileType: 
+--- !u!114 &2095766122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241866925}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095766118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2108850753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -5011,6 +5463,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 191150022}
+  tileType: 
+--- !u!114 &2108850757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441927297638098201, guid: c84a906fa1cd0c249b0d2eee4970a597,
+    type: 3}
+  m_PrefabInstance: {fileID: 324689329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108850753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &449672992713422674
 PrefabInstance:
   m_ObjectHideFlags: 0

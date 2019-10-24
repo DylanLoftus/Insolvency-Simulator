@@ -61,6 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 0}
+  tileType: Rail
 --- !u!65 &7758266092185481085
 BoxCollider:
   m_ObjectHideFlags: 0

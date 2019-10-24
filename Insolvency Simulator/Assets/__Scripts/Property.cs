@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Property : MonoBehaviour
 {
-    [SerializeField]
-    private string propertyName;
-    [SerializeField]
-    private int propertyFaceValue;
-    [SerializeField]
-    private int houseCost;
-    [SerializeField]
-    private bool isOwned = false;
+    public string propertyName;
+    public int propertyFaceValue;
+    public int houseCost;
+    public bool isOwned = false;
+    public int playerID;
 
     // Start is called before the first frame update
     void Start()

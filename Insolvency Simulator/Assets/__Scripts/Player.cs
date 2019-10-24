@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     // Instance variables.
     public Tile StartTile;
     public int PlayerID;
-    public int startMoney = 1500;
+    public int money = 1500;
     Tile currentTile;
     GameManager theGameManager;
 

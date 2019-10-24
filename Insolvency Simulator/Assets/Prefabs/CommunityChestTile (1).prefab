@@ -59,6 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 0}
+  tileType: Community
 --- !u!65 &6374086678107878288
 BoxCollider:
   m_ObjectHideFlags: 0

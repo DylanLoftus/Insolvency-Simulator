@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextTiles:
   - {fileID: 0}
+  tileType: Tax
 --- !u!65 &2874875118672326056
 BoxCollider:
   m_ObjectHideFlags: 0
