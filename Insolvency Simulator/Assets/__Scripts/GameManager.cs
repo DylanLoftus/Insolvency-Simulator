@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     {
         CheckPlayerMoney();
         Debug.Log("Current player is: " + CurrentPlayerID);
-        Debug.Log(CurrentPlayerMoney);
     }
 
     // Update is called once per frame
@@ -36,7 +35,6 @@ public class GameManager : MonoBehaviour
         {
             // We have finished the turn.
             CurrentPlayerID++;
-            Debug.Log(CurrentPlayerMoney);
             NewTurn();
         }
     }
@@ -84,9 +82,11 @@ public class GameManager : MonoBehaviour
                         player.money += 200;
                         break;
                     case "Property":
+                        Debug.Log("Landed on property tile.");
                         Property currentProperty = tile.GetComponent<Property>();
                         if (currentProperty.isOwned)
                         {
+                            Debug.Log("This property is owned.");
                             int playerID = currentProperty.playerID;
 
                             Player[] playerArray = GameObject.FindObjectsOfType<Player>();
@@ -100,11 +100,14 @@ public class GameManager : MonoBehaviour
                             }
 
                             player.money -= currentProperty.propertyFaceValue;
+                            Debug.Log(CurrentPlayerMoney);
 
                         }
                         else
                         {
+                            Debug.Log("This property is not owned.");
                             player.money -= currentProperty.propertyFaceValue;
+                            Debug.Log(CurrentPlayerMoney);
                             currentProperty.isOwned = true;
                             currentProperty.playerID = CurrentPlayerID;
                         }
