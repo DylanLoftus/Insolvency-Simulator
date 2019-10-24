@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour
     // To check if the player is done moving.
     public bool IsDoneMoving = false;
     // To check if the player has finished their tile interaction.
-    // NOT IN USE YET.
-    //public bool IsDoneInteraction = false;
+    public bool IsDoneInteraction = false;
 
     public bool doubleRoll = false;
 
@@ -53,7 +52,7 @@ public class GameManager : MonoBehaviour
 
         IsDoneRolling = false;
         IsDoneMoving = false;
-        //IsDoneInteraction = false;
+        IsDoneInteraction = false;
     }
 
     public void RollAgain()
@@ -61,7 +60,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Rolled a Double! Roll again!");
         IsDoneRolling = false;
         IsDoneMoving = false;
-        //IsDoneAnimating = false;
+        IsDoneInteraction = false;
     }
 
     public void CheckCorrectPlayer()
@@ -125,6 +124,7 @@ public class GameManager : MonoBehaviour
                         }
                         break;
                     case "Community":
+                        Debug.Log("No implementation yet.");
                         break;
                     case "Tax":
                         Debug.Log("You've landed on a tax tile.");
@@ -133,8 +133,10 @@ public class GameManager : MonoBehaviour
                         Debug.Log("You now have: " + player.money);
                         break;
                     case "Railroad":
+                        Debug.Log("No implementation yet.");
                         break;
                     case "Chance":
+                        Debug.Log("No implementation yet.");
                         break;
                     case "Jail":
                         if (player.isInJail)
@@ -156,6 +158,10 @@ public class GameManager : MonoBehaviour
                         }
                         break;
                     case "Utility":
+                        UtilityTile utilityTile = tile.GetComponent<UtilityTile>();
+                        Debug.Log("You landed on a Utility tile.");
+                        player.money -= utilityTile.utilityPrice;
+                        Debug.Log("You paid " + utilityTile.utilityName + " " + utilityTile.utilityPrice);
                         break;
                     case "Free Parking":
                         Debug.Log("Nothing happens here.");
@@ -174,6 +180,8 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
+        IsDoneInteraction = true;
     }
 
     // This method checks the ammount of money a player has.

@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class UtilityTile : MonoBehaviour
 {
-    [SerializeField]
-    private string utilityName;
-    [SerializeField]
-    private int utilityPrice;
+    public string utilityName;
+    public int utilityPrice;
 
     // Start is called before the first frame update
     void Start()
