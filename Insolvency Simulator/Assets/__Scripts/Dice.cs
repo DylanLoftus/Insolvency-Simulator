@@ -7,13 +7,17 @@ using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
 {
+    // Instance variables.
     public int[] DiceValues;
     public int DiceTotal;
 
+    // Images of dice faces.
     public Sprite[] DiceImages;
 
+    // To check if the dice is done rolling or not.
     public bool IsDoneRolling = false;
 
+    // Start by initializing the DiceValues array.
     private void Start()
     {
         DiceValues = new int[2];
@@ -24,14 +28,24 @@ public class Dice : MonoBehaviour
         
     }
 
+    // Method that rolls the Dice
+
     public void RollDice()
     {
+        // Set DiceTotal to 0 for now.
         DiceTotal = 0;
 
+        // Run the loop for as many dices as we have and store the values.
+        // Also display the sprite that corresponds with the dice roll.
         for (int i = 0; i < DiceValues.Length; i++)
         {
+            // Get a random number between 1 and 7 exclusive and put it into the DiceValues array.
             DiceValues[i] = Random.Range(1, 7);
+
+            // Add that number to DiceTotal.
             DiceTotal += DiceValues[i];
+
+            // Checks to see which sprite needs to be displayed.
             switch (DiceValues[i])
             {
                 case 1:
@@ -55,13 +69,15 @@ public class Dice : MonoBehaviour
             }
         }
 
+        // Rolling the dice is done at this point. Put the player's turn has not finished yet...
         IsDoneRolling = true;
         Debug.Log("Rolled: " + DiceTotal);
 
+        // Find the player and move it.
         Player player;
         player = GameObject.FindObjectOfType<Player>();
         player.Move();
-        NewTurn();
+        //NewTurn();
     }
  
     public void NewTurn()

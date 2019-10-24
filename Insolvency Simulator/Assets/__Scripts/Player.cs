@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // Instance variables.
     public Tile StartTile;
     [SerializeField]
     private int playerNumber;
     Tile currentTile;
     Dice dice;
-    private int turn = 1;
 
-    // Start is called before the first frame update
+    // Start by putting the players at their respective start positions.
+    // In this case they all get sent to the 'Go' tile.
+    // Get a reference for the dice as well.
     void Start()
     {
         this.transform.position = StartTile.transform.position;
@@ -24,9 +26,10 @@ public class Player : MonoBehaviour
         
     }
 
+    // Handles player movement.
     public void Move()
     {
-
+        // Check to see if it's our turn.
         if (dice.IsDoneRolling == false)
         {
             // Do not move
