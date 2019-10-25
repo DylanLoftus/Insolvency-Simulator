@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TaxTile : MonoBehaviour
 {
-    [SerializeField]
-    private int taxAmmount;
+    public int taxAmmount;
 
     // Start is called before the first frame update
     void Start()

@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
         {
             if(theGameManager.doubleRoll == true || jailTurn == 3)
             {
+                jailTurn = 0;
                 MoveSpaces();
             }
             else
@@ -73,8 +74,8 @@ public class Player : MonoBehaviour
             {
                 if (doubleCount == 3)
                 {
-                    this.transform.position = GameObject.FindGameObjectWithTag("Jail").transform.position;
-                    isInJail = true;
+                    doubleCount = 0;
+                    theGameManager.GoToJail(this);
                 }
                 else
                 {

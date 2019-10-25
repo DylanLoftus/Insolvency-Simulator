@@ -23,6 +23,6 @@ public class CurrentPlayerMoney : MonoBehaviour
     void Update()
     {
         // Updates the text component depending on which player's turn it is.
-        currentPlayerMoney.text = "Money: " + theGameManager.CurrentPlayerMoney;
+        currentPlayerMoney.text = "Money: " + theGameManager.CheckPlayerMoney();
     }
 }
