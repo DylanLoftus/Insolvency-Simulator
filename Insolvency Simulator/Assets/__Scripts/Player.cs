@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
             else
             {
                 jailTurn++;
+                theGameManager.IsDoneMoving = true;
             }
         }
         else
