@@ -22,4 +22,9 @@ public class MenuScript : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
