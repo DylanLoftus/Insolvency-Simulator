@@ -8,6 +8,7 @@ public class CurrentPlayerTurnDisplay : MonoBehaviour
     // Instance Variables
     GameManager theGameManager;
     Text currentPlayerText;
+    Sprite currentPlayerSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,10 @@ public class CurrentPlayerTurnDisplay : MonoBehaviour
         // Get a reference for the game manager and the text element.
         theGameManager = GameObject.FindObjectOfType<GameManager>();
         currentPlayerText = GetComponent<Text>();
+        currentPlayerSprite = GetComponent<Image>().sprite;
     }
+
+
 
     // Prints out the words instead of the number.
     string[] numberWords = {"One", "Two", "Three" };
@@ -25,5 +29,6 @@ public class CurrentPlayerTurnDisplay : MonoBehaviour
     {
         // Updates the text component depending on which player's turn it is.
         currentPlayerText.text = "Current Player: " + numberWords[theGameManager.CurrentPlayerID];
+        currentPlayerSprite = theGameManager.playerImages[theGameManager.CurrentPlayerID];
     }
 }

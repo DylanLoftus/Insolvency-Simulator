@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public bool doubleRoll = false;
 
+    public Sprite[] playerImages;
+
 
 
     // Start is called before the first frame update
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
         IsDoneInteraction = false;
         doubleRoll = false;
     }
+
 
     // This method checks to see if we're moving the correct player.
     public void CheckCorrectPlayer()
