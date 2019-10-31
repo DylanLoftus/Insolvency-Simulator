@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         // Check the players money.
         CheckPlayerMoney();
-        Debug.Log("Current player is: " + CurrentPlayerID);
+        Debug.Log("Current player is: " + (CurrentPlayerID + 1));
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             CurrentPlayerID = 0;
         }
-        Debug.Log("Current player is: " + CurrentPlayerID);
+        Debug.Log("Current player is: " + (CurrentPlayerID + 1));
 
         IsDoneRolling = false;
         IsDoneMoving = false;
