@@ -1675,7 +1675,6 @@ GameObject:
   - component: {fileID: 547516870}
   - component: {fileID: 547516872}
   - component: {fileID: 547516871}
-  - component: {fileID: 547516873}
   m_Layer: 5
   m_Name: PlayerIcon
   m_TagString: Untagged
@@ -1739,18 +1738,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547516869}
   m_CullTransparentMesh: 0
---- !u!114 &547516873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547516869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c710334f23aa61a498ba3470823d4cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &550295703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3657,7 +3644,6 @@ MonoBehaviour:
   IsDoneMoving: 0
   IsDoneInteraction: 0
   doubleRoll: 0
-  playerImages: []
 --- !u!4 &1465168406
 Transform:
   m_ObjectHideFlags: 0

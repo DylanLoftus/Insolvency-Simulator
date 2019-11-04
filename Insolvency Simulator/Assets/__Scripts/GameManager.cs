@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
 
     public bool doubleRoll = false;
 
-    public Sprite[] playerImages;
 
 
 
