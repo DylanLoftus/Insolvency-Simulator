@@ -74,7 +74,6 @@ public class GameManager : MonoBehaviour
         doubleRoll = false;
     }
 
-
     // This method checks to see if we're moving the correct player.
     public void CheckCorrectPlayer()
     {
@@ -126,7 +125,7 @@ public class GameManager : MonoBehaviour
                         TaxHandler(player, tile);
                         break;
                     case "Rail":
-                        Debug.Log("No implementation yet.");
+                        RailRoadHandler(player, tile);
                         break;
                     case "Chance":
                         Debug.Log("No implementation yet.");
@@ -222,10 +221,37 @@ public class GameManager : MonoBehaviour
     public void RailRoadHandler(Player player, Tile tile)
     {
         RailRoad railRoad = tile.GetComponent<RailRoad>();
-        Debug.Log("You've landed on a rail road tile.");
-        player.money -= railRoad.buyAmmount;
-        Debug.Log("Purchased Railroad");
-        Debug.Log("You now have: " + player.money);
+        if (railRoad.isOwned)
+        {
+            Debug.Log("This railroad is owned.");
+            int playerID = railRoad.playerID;
+            int rent = railRoad.rent;
+
+            Player[] playerArray = GameObject.FindObjectsOfType<Player>();
+
+            foreach (Player players in playerArray)
+            {
+                if (players.PlayerID == playerID)
+                {
+                    int playerPreviousMoney = players.money;
+                    players.money += rent;
+                    Debug.Log("Payed Player: " + (players.PlayerID + 1) + " " + rent);
+                    Debug.Log("Player " + (players.PlayerID + 1) + " had " + playerPreviousMoney + " and now has " + players.money);
+                }
+            }
+
+            player.money -= rent;
+            Debug.Log(CurrentPlayerMoney);
+        }
+        else
+        {
+            Debug.Log("You've landed on a rail road tile.");
+            player.money -= railRoad.buyAmmount;
+            railRoad.isOwned = true;
+            railRoad.playerID = CurrentPlayerID;
+            Debug.Log("Purchased Railroad");
+            Debug.Log("You now have: " + player.money);
+        }
     }
 
     // This method handles when a player is in jail.
