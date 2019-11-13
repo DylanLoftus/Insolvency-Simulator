@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class RailRoad : MonoBehaviour
 {
-
-    [SerializeField]
-    private int buyAmmount;
-    [SerializeField]
-    private int rent;
+    public int buyAmmount;
+    public int rent;
+    public bool isOwned = false;
+    public int playerID;
 
     // Start is called before the first frame update
     void Start()

@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public bool doubleRoll = false;
 
+    public bool passedGo = false;
+
 
 
 
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // If all are true.
-        if(IsDoneRolling && IsDoneMoving)
+        if(IsDoneRolling && IsDoneMoving && IsDoneInteraction)
         {
             // We have finished the turn.
             // Move to the next player.
@@ -83,8 +85,23 @@ public class GameManager : MonoBehaviour
             if (player.PlayerID == CurrentPlayerID)
             {
                 player.Move();
+                CheckPassingGo(player);
                 CheckTileType(player);
             }
+        }
+    }
+
+    // Checks to see if the player has passed Go.
+    public void CheckPassingGo(Player player)
+    {
+        if(passedGo == true)
+        {
+            Debug.Log("PASSED GO!!!!!!!!");
+            Debug.Log("Added 200 to player " + CurrentPlayerID);
+            Debug.Log("Player " + (CurrentPlayerID + 1) + " has " + player.money);
+            player.money += 200;
+            Debug.Log("Player " + (CurrentPlayerID + 1) + " has " + player.money);
+            passedGo = false;
         }
     }
 
@@ -99,9 +116,6 @@ public class GameManager : MonoBehaviour
             {
                 switch (tile.tileType)
                 {
-                    case "Go":
-                        player.money += 200;
-                        break;
                     case "Property":
                         PropertyHandler(player, tile);
                         break;
@@ -202,6 +216,15 @@ public class GameManager : MonoBehaviour
         Debug.Log("You've landed on a tax tile.");
         player.money -= taxTile.taxAmmount;
         Debug.Log("You've paid 200 to the bank.");
+        Debug.Log("You now have: " + player.money);
+    }
+
+    public void RailRoadHandler(Player player, Tile tile)
+    {
+        RailRoad railRoad = tile.GetComponent<RailRoad>();
+        Debug.Log("You've landed on a rail road tile.");
+        player.money -= railRoad.buyAmmount;
+        Debug.Log("Purchased Railroad");
         Debug.Log("You now have: " + player.money);
     }
 

@@ -102,6 +102,11 @@ public class Player : MonoBehaviour
             else
             {
                 finalTile = finalTile.NextTiles[0];
+                if(finalTile.tileType == "Go")
+                {
+                    Debug.Log("Passing go or Landed on go?");
+                    theGameManager.passedGo = true;
+                }
             }
         }
 
