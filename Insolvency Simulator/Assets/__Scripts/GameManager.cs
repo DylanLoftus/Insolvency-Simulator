@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
     // Pulls a chance card and does that chance cards action.
     private void ChanceCardHandler(Player player)
     {
-        int random = Random.Range(0, 8);
+        int random = Random.Range(0, 7);
         ChanceCard card = chanceCards[random];
 
         switch (card.chanceId)
@@ -196,7 +196,7 @@ public class GameManager : MonoBehaviour
     // Pulls a community chest card and does the action.
     private void CommunityChestHandler(Player player)
     {
-        int random = Random.Range(0, 9);
+        int random = Random.Range(0, 8);
         CommunityChest chest = communityChests[random];
 
         switch (chest.chestId)
