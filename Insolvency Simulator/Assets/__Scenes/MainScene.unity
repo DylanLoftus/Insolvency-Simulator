@@ -363,12 +363,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70461566}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.04, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.025480986, y: -0.2315111, z: -6.8808594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 365358556}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &70461569
 MonoBehaviour:
@@ -387,6 +387,90 @@ MonoBehaviour:
   isInJail: 0
   jailTurn: 0
   money: 1500
+  currentTile: {fileID: 0}
+  finalTile: {fileID: 0}
+--- !u!1 &82659207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82659208}
+  - component: {fileID: 82659209}
+  m_Layer: 0
+  m_Name: ChanceCard (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82659208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82659207}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90328104}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82659209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82659207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97395ebf816a85a4cb8a6d82ae13066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceId: 5
+  chanceAction: "Make general repairs on all your property: For each house pay \u20AC25."
+--- !u!1 &90328103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 90328104}
+  m_Layer: 0
+  m_Name: ChanceCards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &90328104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90328103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.014519, y: 0.2315111, z: 6.8808594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1469873382}
+  - {fileID: 1146766522}
+  - {fileID: 1941238884}
+  - {fileID: 808229160}
+  - {fileID: 82659208}
+  - {fileID: 1280881876}
+  - {fileID: 1633776088}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &141360209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,6 +560,44 @@ PrefabInstance:
       objectReference: {fileID: 1503785729}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
+--- !u!1 &142005662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142005663}
+  m_Layer: 0
+  m_Name: CommunityChests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142005663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142005662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.014519, y: 0.2315111, z: 6.8808594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2013267090}
+  - {fileID: 243241721}
+  - {fileID: 857525478}
+  - {fileID: 390399509}
+  - {fileID: 1356173071}
+  - {fileID: 1234589366}
+  - {fileID: 2101376186}
+  - {fileID: 1412428601}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &168310414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -846,6 +968,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &243241720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243241721}
+  - component: {fileID: 243241722}
+  m_Layer: 0
+  m_Name: CommunityChest (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243241721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243241720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243241722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243241720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 2
+  chestAction: "From sale of stock you get \u20AC50."
 --- !u!1 &260898594
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +1026,7 @@ GameObject:
   - component: {fileID: 260898597}
   m_Layer: 0
   m_Name: GoTile
-  m_TagString: Untagged
+  m_TagString: Go
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1186,6 +1353,39 @@ PrefabInstance:
       objectReference: {fileID: 191150023}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
+--- !u!1 &365358555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365358556}
+  m_Layer: 0
+  m_Name: Players
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365358556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365358555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.014519, y: 0.2315111, z: 6.8808594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 825333510}
+  - {fileID: 70461568}
+  - {fileID: 1079517488}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366423880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,8 +1450,53 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &390399508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390399509}
+  - component: {fileID: 390399510}
+  m_Layer: 0
+  m_Name: CommunityChest (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &390399509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390399508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &390399510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390399508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 4
+  chestAction: "Income tax refund. Collect \u20AC20."
 --- !u!1 &420247328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1235104782412309618, guid: 2739a6359b9790a4fab978ecbda9230f,
@@ -1675,6 +1920,7 @@ GameObject:
   - component: {fileID: 547516870}
   - component: {fileID: 547516872}
   - component: {fileID: 547516871}
+  - component: {fileID: 547516873}
   m_Layer: 5
   m_Name: PlayerIcon
   m_TagString: Untagged
@@ -1738,6 +1984,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547516869}
   m_CullTransparentMesh: 0
+--- !u!114 &547516873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547516869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9bcd14d1080cd458cfd1b3385a11a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIcons:
+  - {fileID: 21300000, guid: c562f2e9e4dec6a46aaaa5bfc4f17920, type: 3}
+  - {fileID: 21300000, guid: 00c255ef4f2eb0348ba122ff31bdee15, type: 3}
+  - {fileID: 21300000, guid: a62ac3dc4b2e9ab488d9be7f952b3730, type: 3}
+  theGameManager: {fileID: 0}
 --- !u!1001 &550295703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2141,12 +2404,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610736796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.314, y: 4.129, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.299481, y: 3.897489, z: -6.8808594}
   m_LocalScale: {x: 0.15626548, y: 0.030471103, z: 0.378}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1073951607}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &611025733
 PrefabInstance:
@@ -2428,6 +2691,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &808229159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808229160}
+  - component: {fileID: 808229161}
+  m_Layer: 0
+  m_Name: ChanceCard (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &808229160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808229159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90328104}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808229161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808229159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97395ebf816a85a4cb8a6d82ae13066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceId: 4
+  chanceAction: "Go to Jail. Go directly to Jail. Do not pass GO, do not collect \u20AC200."
 --- !u!1 &825333508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,12 +2809,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825333508}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.014519, y: -0.2315111, z: -6.8808594}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.031287394}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 365358556}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &825333511
 MonoBehaviour:
@@ -2525,6 +2833,8 @@ MonoBehaviour:
   isInJail: 0
   jailTurn: 0
   money: 1500
+  currentTile: {fileID: 0}
+  finalTile: {fileID: 0}
 --- !u!1 &838541183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -2591,6 +2901,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &857525477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 857525478}
+  - component: {fileID: 857525479}
+  m_Layer: 0
+  m_Name: CommunityChest (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &857525478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857525477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &857525479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857525477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 3
+  chestAction: "Bank error in your favour. Collect \u20AC200."
 --- !u!1 &912695344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,7 +3134,7 @@ Transform:
   - {fileID: 1220425345}
   - {fileID: 1795356318}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1064026155 stripped
 GameObject:
@@ -2820,6 +3175,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1073951606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1073951607}
+  m_Layer: 0
+  m_Name: PlayerUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1073951607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073951606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.014519, y: 0.2315111, z: 6.8808594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1596411435}
+  - {fileID: 1980128651}
+  - {fileID: 1748253899}
+  - {fileID: 610736798}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1075108559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,6 +3304,8 @@ MonoBehaviour:
   isInJail: 0
   jailTurn: 0
   money: 1500
+  currentTile: {fileID: 0}
+  finalTile: {fileID: 0}
 --- !u!212 &1079517487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2970,12 +3361,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079517485}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.014519, y: -0.2315111, z: -6.8808594}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.053528585}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 365358556}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085938784 stripped
 GameObject:
@@ -3105,6 +3496,51 @@ PrefabInstance:
       objectReference: {fileID: 490633091}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
+--- !u!1 &1146766521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146766522}
+  - component: {fileID: 1146766523}
+  m_Layer: 0
+  m_Name: ChanceCard (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1146766522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146766521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90328104}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146766523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146766521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97395ebf816a85a4cb8a6d82ae13066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceId: 2
+  chanceAction: "Advance to Nun's Island. If you pass Go, collect \u20AC200."
 --- !u!1 &1148555226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -3339,6 +3775,51 @@ Transform:
   m_Father: {fileID: 1044609663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1234589365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234589366}
+  - component: {fileID: 1234589367}
+  m_Layer: 0
+  m_Name: CommunityChest (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1234589366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234589365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234589367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234589365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 6
+  chestAction: "School fees. Pay \u20AC50."
 --- !u!1001 &1241866925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3467,6 +3948,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1280881875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1280881876}
+  - component: {fileID: 1280881877}
+  m_Layer: 0
+  m_Name: ChanceCard (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1280881876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280881875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90328104}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280881877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280881875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97395ebf816a85a4cb8a6d82ae13066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceId: 6
+  chanceAction: "Pay poor tax of \u20AC15."
 --- !u!1 &1320343971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1918540441954523913, guid: abfe547b729a8b341ac22ff070187cb3,
@@ -3580,6 +4106,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327414514}
   m_CullTransparentMesh: 0
+--- !u!1 &1356173070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356173071}
+  - component: {fileID: 1356173072}
+  m_Layer: 0
+  m_Name: CommunityChest (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356173071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356173070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356173072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356173070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 5
+  chestAction: "Hospital fees. Pay \u20AC50."
 --- !u!1 &1392765709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -3607,6 +4178,51 @@ MonoBehaviour:
   NextTiles:
   - {fileID: 1323465991068991840}
   tileType: 
+--- !u!1 &1412428600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1412428601}
+  - component: {fileID: 1412428602}
+  m_Layer: 0
+  m_Name: CommunityChest (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1412428601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412428600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1412428602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412428600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 8
+  chestAction: "You inherit \u20AC100."
 --- !u!1 &1465168404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,11 +4255,29 @@ MonoBehaviour:
   CurrentPlayerID: 0
   CurrentPlayerMoney: 0
   DiceTotal: 0
+  chanceCards:
+  - {fileID: 1469873383}
+  - {fileID: 1146766523}
+  - {fileID: 1941238885}
+  - {fileID: 808229161}
+  - {fileID: 82659209}
+  - {fileID: 1280881877}
+  - {fileID: 1633776089}
+  communityChests:
+  - {fileID: 2013267091}
+  - {fileID: 243241722}
+  - {fileID: 857525479}
+  - {fileID: 390399510}
+  - {fileID: 1356173072}
+  - {fileID: 1234589367}
+  - {fileID: 2101376187}
+  - {fileID: 1412428602}
   NumberOfPlayers: 3
   IsDoneRolling: 0
   IsDoneMoving: 0
   IsDoneInteraction: 0
   doubleRoll: 0
+  passedGo: 0
 --- !u!4 &1465168406
 Transform:
   m_ObjectHideFlags: 0
@@ -3656,8 +4290,53 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1469873381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469873382}
+  - component: {fileID: 1469873383}
+  m_Layer: 0
+  m_Name: ChanceCard (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1469873382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469873381}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90328104}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1469873383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469873381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97395ebf816a85a4cb8a6d82ae13066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceId: 1
+  chanceAction: "Advance to \"Go\". (Collect \u20AC200)."
 --- !u!1 &1503785725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1235104782412309618, guid: 2739a6359b9790a4fab978ecbda9230f,
@@ -3921,7 +4600,7 @@ RectTransform:
   - {fileID: 912695345}
   - {fileID: 547516870}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4009,16 +4688,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596411432}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.35, y: 1.15, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -6.8808594}
+  m_LocalScale: {x: 1.3500005, y: 1.1500005, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1073951607}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.62, y: 0}
+  m_AnchoredPosition: {x: 7.605481, y: -0.2315111}
   m_SizeDelta: {x: 7.5, y: 4.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1603658038 stripped
@@ -4087,6 +4766,51 @@ MonoBehaviour:
   NextTiles:
   - {fileID: 1584976422}
   tileType: 
+--- !u!1 &1633776087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633776088}
+  - component: {fileID: 1633776089}
+  m_Layer: 0
+  m_Name: ChanceCard (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633776088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633776087}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90328104}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1633776089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633776087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97395ebf816a85a4cb8a6d82ae13066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceId: 7
+  chanceAction: "Your building and loan matures. Receive Collect \u20AC150."
 --- !u!1 &1638821231 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -4275,12 +4999,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748253897}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.314, y: 3.6, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.299481, y: 3.3684888, z: -6.8808594}
   m_LocalScale: {x: 0.15626548, y: 0.030471103, z: 0.378}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1073951607}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1774596098
 PrefabInstance:
@@ -5072,6 +5796,51 @@ PrefabInstance:
       objectReference: {fileID: 1323465991068991840}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a906fa1cd0c249b0d2eee4970a597, type: 3}
+--- !u!1 &1941238883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941238884}
+  - component: {fileID: 1941238885}
+  m_Layer: 0
+  m_Name: ChanceCard (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1941238884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941238883}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90328104}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941238885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941238883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97395ebf816a85a4cb8a6d82ae13066d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceId: 3
+  chanceAction: "Bank pays you dividend of \u20AC50."
 --- !u!1001 &1959803857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5298,11 +6067,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980128649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.790009, y: 0.039993286, z: 0}
+  m_LocalPosition: {x: 7.77549, y: -0.19151781, z: -6.8808594}
   m_LocalScale: {x: 0.3, y: 0.9, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1073951607}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2011199642
 PrefabInstance:
@@ -5378,6 +6147,51 @@ PrefabInstance:
       objectReference: {fileID: 262618698}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2739a6359b9790a4fab978ecbda9230f, type: 3}
+--- !u!1 &2013267089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013267090}
+  - component: {fileID: 2013267091}
+  m_Layer: 0
+  m_Name: CommunityChest (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2013267090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013267089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2013267091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013267089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 1
+  chestAction: "Advance to \"Go\". (Collect \u20AC200)."
 --- !u!1 &2015481506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,
@@ -5785,6 +6599,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74440d1d611374446812c07954e01130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2101376185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2101376186}
+  - component: {fileID: 2101376187}
+  m_Layer: 0
+  m_Name: CommunityChest (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2101376186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101376185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 142005663}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2101376187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101376185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750a88f62d01ca647bc8bb4326cb9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestId: 7
+  chestAction: "You are assessed for street repairs: Pay \u20AC40 per house."
 --- !u!1 &2108850753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8441927297638098200, guid: c84a906fa1cd0c249b0d2eee4970a597,

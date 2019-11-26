@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChanceTile : MonoBehaviour
+public class ChanceCard : MonoBehaviour
 {
+    public int chanceId;
+    public string chanceAction;
 
     // Start is called before the first frame update
     void Start()

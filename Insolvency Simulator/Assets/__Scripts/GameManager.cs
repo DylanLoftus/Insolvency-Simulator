@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
     public int CurrentPlayerID = 0;
     public int CurrentPlayerMoney;
     public int DiceTotal;
+    public ChanceCard[] chanceCards;
+    public CommunityChest[] communityChests;
 
     public int NumberOfPlayers = 3;
 
@@ -119,7 +122,7 @@ public class GameManager : MonoBehaviour
                         PropertyHandler(player, tile);
                         break;
                     case "Community":
-                        Debug.Log("No implementation yet.");
+                        CommunityChestHandler(player);
                         break;
                     case "Tax":
                         TaxHandler(player, tile);
@@ -128,7 +131,7 @@ public class GameManager : MonoBehaviour
                         RailRoadHandler(player, tile);
                         break;
                     case "Chance":
-                        Debug.Log("No implementation yet.");
+                        ChanceCardHandler(player);
                         break;
                     case "Jail":
                         JailHandler(player);
@@ -151,6 +154,78 @@ public class GameManager : MonoBehaviour
 
         IsDoneInteraction = true;
         Debug.Log("----- END TURN -----");
+    }
+
+    private void ChanceCardHandler(Player player)
+    {
+        int random = Random.Range(0, 8);
+        ChanceCard card = chanceCards[random];
+
+        switch (card.chanceId)
+        {
+            case 1:
+                GameObject goTileObj = GameObject.FindGameObjectWithTag("Go");
+                Tile goTile = goTileObj.GetComponent<Tile>();
+                player.currentTile = goTile;
+                break;
+            case 2:
+                // TODO: pass go mallarcy  
+                GameObject nunsIslandObj = GameObject.FindGameObjectWithTag("Nun");
+                Tile nunTile = nunsIslandObj.GetComponent<Tile>();
+                player.currentTile = nunTile;
+                break;
+            case 3:
+                player.money += 50;
+                break;
+            case 4:
+                GoToJail(player);
+                break;
+            case 5:
+                player.money -= 25 * player.houseCount;
+                break;
+            case 6:
+                player.money -= 15;
+                break;
+            case 7:
+                player.money += 150;
+                break;
+        }
+    }
+
+    private void CommunityChestHandler(Player player)
+    {
+        int random = Random.Range(0, 9);
+        CommunityChest chest = communityChests[random];
+
+        switch (chest.chestId)
+        {
+            case 1:
+                GameObject goTileObj = GameObject.FindGameObjectWithTag("Go");
+                Tile goTile = goTileObj.GetComponent<Tile>();
+                player.currentTile = goTile;
+                break;
+            case 2:
+                player.money += 50;
+                break;
+            case 3:
+                player.money += 200;
+                break;
+            case 4:
+                player.money += 20;
+                break;
+            case 5:
+                player.money -= 50;
+                break;
+            case 6:
+                player.money -= 50;
+                break;
+            case 7:
+                player.money -= 40 * player.houseCount;
+                break;
+            case 8:
+                player.money += 100;
+                break;
+        }
     }
 
     // This method checks the ammount of money a player has.
@@ -257,23 +332,7 @@ public class GameManager : MonoBehaviour
     // This method handles when a player is in jail.
     public void JailHandler(Player player)
     {
-        if (player.isInJail)
-        {
-            if (player.jailTurn == 3)
-            {
-                player.isInJail = false;
-            }
-
-            // Do jail logic
-            if (doubleRoll)
-            {
-                player.isInJail = false;
-            }
-        }
-        else
-        {
-            Debug.Log("Just visiting :D.");
-        }
+        Debug.Log("Just visiting :D.");
     }
 
     // This method handles all utility tile interactions.
@@ -288,8 +347,12 @@ public class GameManager : MonoBehaviour
     // Sends a player to jail.
     public void GoToJail(Player player)
     {
+        player.isInJail = true;
         Debug.Log("You've landed on the GO TO JAIL tile.");
         player.transform.position = GameObject.FindGameObjectWithTag("Jail").transform.position;
+        GameObject jailTileObj = GameObject.FindGameObjectWithTag("Jail");
+        Tile jailTile = jailTileObj.GetComponent<Tile>();
+        player.currentTile = jailTile;
         Debug.Log("Moved to Jail.");
     }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CommunityChest : MonoBehaviour
 {
+
+    public int chestId;
+    public string chestAction;
+
     // Start is called before the first frame update
     void Start()
     {

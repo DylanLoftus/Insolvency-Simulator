@@ -10,8 +10,10 @@ public class Player : MonoBehaviour
     public bool isInJail = false;
     public int jailTurn = 0;
     public int money = 1500;
+    public int houseCount = 0;
     private int doubleCount = 0;
-    Tile currentTile;
+    public Tile currentTile;
+    public Tile finalTile;
     GameManager theGameManager;
 
     // Start by putting the players at their respective start positions.
@@ -56,8 +58,11 @@ public class Player : MonoBehaviour
         // Check to see if in jail.
         if (isInJail)
         {
+            Debug.Log("You are IN JAIL");
+
             if(theGameManager.doubleRoll == true || jailTurn == 3)
             {
+                isInJail = false;
                 jailTurn = 0;
                 MoveSpaces();
             }
@@ -90,7 +95,7 @@ public class Player : MonoBehaviour
     {
         // How many space we have to move.
         int spacesToMove = theGameManager.DiceTotal;
-        Tile finalTile = currentTile;
+        finalTile = currentTile;
 
         for (int i = 0; i < spacesToMove; i++)
         {
