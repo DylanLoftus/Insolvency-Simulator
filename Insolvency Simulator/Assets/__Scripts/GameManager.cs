@@ -156,6 +156,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("----- END TURN -----");
     }
 
+    // Pulls a chance card and does that chance cards action.
     private void ChanceCardHandler(Player player)
     {
         int random = Random.Range(0, 8);
@@ -192,6 +193,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Pulls a community chest card and does the action.
     private void CommunityChestHandler(Player player)
     {
         int random = Random.Range(0, 9);
@@ -253,28 +255,51 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("This property is owned.");
             int playerID = currentProperty.playerID;
-            int rent = (currentProperty.propertyFaceValue / 100) * 20;
 
-            Player[] playerArray = GameObject.FindObjectsOfType<Player>();
-
-            foreach (Player players in playerArray)
+            if (playerID == player.PlayerID)
             {
-                if (players.PlayerID == playerID)
+                int ownCount = 0;
+                Debug.Log("You own this property.");
+                // CHECK TO SEE IF MONOPOLY
+                for(int i = 0; i < currentProperty.propertyGroup.Length; i++)
                 {
-                    int playerPreviousMoney = players.money;
-                    players.money += rent;
-                    Debug.Log("Payed Player: " + (players.PlayerID + 1) + " " + rent);
-                    Debug.Log("Player " + (players.PlayerID + 1) + " had " + playerPreviousMoney + " and now has " + players.money);
+                    if(player.PlayerID == currentProperty.propertyGroup[i].playerID)
+                    {
+                        ownCount++;
+                    }
+                }
+
+                if(ownCount == currentProperty.propertyGroup.Length)
+                {
+                    Debug.Log("You have a monopoly.");
+                    // TODO: Allow player to buy house if he/she wants.
                 }
             }
+            else
+            {
+                int rent = (currentProperty.propertyFaceValue / 100) * 20;
 
-            player.money -= rent;
-            Debug.Log(CurrentPlayerMoney);
+                Player[] playerArray = GameObject.FindObjectsOfType<Player>();
 
+                foreach (Player players in playerArray)
+                {
+                    if (players.PlayerID == playerID)
+                    {
+                        int playerPreviousMoney = players.money;
+                        players.money += rent;
+                        Debug.Log("Payed Player: " + (players.PlayerID + 1) + " " + rent);
+                        Debug.Log("Player " + (players.PlayerID + 1) + " had " + playerPreviousMoney + " and now has " + players.money);
+                    }
+                }
+
+                player.money -= rent;
+                Debug.Log(CurrentPlayerMoney);
+            }
         }
         else
         {
             Debug.Log("This property is not owned.");
+            // TODO: Would you like to buy grapic.
             player.money -= currentProperty.propertyFaceValue;
             Debug.Log("Paid :" + currentProperty.propertyFaceValue);
             Debug.Log("You now have: " + player.money);

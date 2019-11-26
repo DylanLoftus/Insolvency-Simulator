@@ -9,6 +9,7 @@ public class Property : MonoBehaviour
     public int houseCost;
     public bool isOwned = false;
     public int playerID;
+    public Property[] propertyGroup;
 
     // Start is called before the first frame update
     void Start()
