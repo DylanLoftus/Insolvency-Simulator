@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int DiceTotal;
     public ChanceCard[] chanceCards;
     public CommunityChest[] communityChests;
+    public Ownership owner;
+    public PropertyUI propUI;
 
     public int NumberOfPlayers = 3;
 
@@ -25,6 +27,9 @@ public class GameManager : MonoBehaviour
 
     public bool passedGo = false;
 
+    public bool buttonPress = false;
+
+    public bool propBuy = false;
 
 
 
@@ -32,6 +37,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Check the players money.
+        propUI = GameObject.FindObjectOfType<PropertyUI>();
+        propUI.gameObject.SetActive(false);
+        owner = GameObject.FindObjectOfType<Ownership>();
         CheckPlayerMoney();
         Debug.Log("Current player is: " + (CurrentPlayerID + 1));
     }
@@ -61,7 +69,6 @@ public class GameManager : MonoBehaviour
             CurrentPlayerID = 0;
         }
         Debug.Log("Current player is: " + (CurrentPlayerID + 1));
-
         IsDoneRolling = false;
         IsDoneMoving = false;
         IsDoneInteraction = false;
@@ -277,6 +284,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+
                 int rent = (currentProperty.propertyFaceValue / 100) * 20;
 
                 Player[] playerArray = GameObject.FindObjectsOfType<Player>();
@@ -300,12 +308,26 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("This property is not owned.");
             // TODO: Would you like to buy grapic.
-            player.money -= currentProperty.propertyFaceValue;
-            Debug.Log("Paid :" + currentProperty.propertyFaceValue);
-            Debug.Log("You now have: " + player.money);
-            currentProperty.isOwned = true;
-            currentProperty.playerID = CurrentPlayerID;
+            while(buttonPress != true)
+            {
+                propUI.gameObject.SetActive(true);
+                if (propBuy)
+                {
+                    BuyProperty(player, currentProperty);
+                }
+            }
+            buttonPress = false;
         }
+    }
+
+    public void BuyProperty(Player player, Property property)
+    {
+        propUI.gameObject.SetActive(false);
+        player.money -= property.propertyFaceValue;
+        Debug.Log("Paid :" + property.propertyFaceValue);
+        Debug.Log("You now have: " + player.money);
+        property.isOwned = true;
+        property.playerID = CurrentPlayerID;
     }
 
     // This method handles all tax tile interactions.
