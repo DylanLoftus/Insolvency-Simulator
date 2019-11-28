@@ -7,6 +7,10 @@ TagManager:
   - Jail
   - Go
   - Nun
+  - house1
+  - house2
+  - house3
+  - house4
   layers:
   - Default
   - TransparentFX

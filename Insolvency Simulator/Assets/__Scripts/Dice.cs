@@ -82,6 +82,7 @@ public class Dice : MonoBehaviour
         theGameManager.IsDoneRolling = true;
         Debug.Log("Rolled: " + theGameManager.DiceTotal);
 
+        // Asks the game manager to.
         theGameManager.CheckCorrectPlayer();
     }
 }

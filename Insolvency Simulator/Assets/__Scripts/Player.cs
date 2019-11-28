@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     // Instance variables.
     public Tile StartTile;
-    public int PlayerID;
+    public int PlayerID = -1;
     public bool isInJail = false;
     public int jailTurn = 0;
     public int money = 1500;
@@ -88,6 +88,8 @@ public class Player : MonoBehaviour
                     theGameManager.RollAgain();
                 }
             }
+
+            theGameManager.doubleRoll = false;
         }
     }
 

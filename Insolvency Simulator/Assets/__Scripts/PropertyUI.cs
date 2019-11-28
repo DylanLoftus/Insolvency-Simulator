@@ -11,14 +11,15 @@ public class PropertyUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<Text>();
+        text = GetComponentInChildren<Text>();
         theGameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        text.text = "You've landed on " + theGameManager.currentProperty.propertyName + "!\n Would you like to buy?";
+
     }
 
     public void BuyTrue()
