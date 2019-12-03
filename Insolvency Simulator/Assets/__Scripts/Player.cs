@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Tile StartTile;
     public int PlayerID = -1;
     public bool isInJail = false;
+    public bool lost = false;
     public int jailTurn = 0;
     public int money = 1500;
     public int houseCount = 0;
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
     public Tile currentTile;
     public Tile finalTile;
     GameManager theGameManager;
+    public SpriteRenderer sprite;
 
     // Start by putting the players at their respective start positions.
     // In this case they all get sent to the 'Go' tile.
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
     {
         this.transform.position = StartTile.transform.position;
         theGameManager = GameObject.FindObjectOfType<GameManager>();
+        sprite = GetComponent<SpriteRenderer>();
         currentTile = StartTile;
     }
 
@@ -40,6 +43,12 @@ public class Player : MonoBehaviour
         if (theGameManager.CurrentPlayerID != PlayerID)
         {
             // It's not our turn yet!
+            return;
+        }
+
+        if (lost == true)
+        {
+            // We lost!
             return;
         }
 
@@ -74,6 +83,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            Debug.Log("moved");
             MoveSpaces();
             if(theGameManager.doubleRoll == true)
             {
@@ -85,7 +95,7 @@ public class Player : MonoBehaviour
                 else
                 {
                     doubleCount++;
-                    theGameManager.RollAgain();
+                    StartCoroutine(theGameManager.RollAgain());
                 }
             }
 
@@ -113,6 +123,7 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("Passing go or Landed on go?");
                     theGameManager.passedGo = true;
+                    theGameManager.StartCoroutine(theGameManager.CheckPassingGo(this));
                 }
             }
         }

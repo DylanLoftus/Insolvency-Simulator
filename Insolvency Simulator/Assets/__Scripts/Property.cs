@@ -59,4 +59,17 @@ public class Property : MonoBehaviour
                 break;
         }
     }
+
+    public void RemoveHouses()
+    {
+        houseCount = 0;
+
+        for (int i = 0; i < 4; i++)
+        {
+            houses = gameObject.transform.Find("Houses");
+            houseT = houses.gameObject.transform.GetChild(i);
+            house = houseT.GetComponent<SpriteRenderer>();
+            house.gameObject.SetActive(false);
+        }
+    }
 }

@@ -8,6 +8,7 @@ public class PropertyOwnMonopoly : MonoBehaviour
     Text text;
     public GameManager theGameManager;
     Button[] button;
+    public bool noButtonPress = false;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,6 @@ public class PropertyOwnMonopoly : MonoBehaviour
 
     public void NoBuyHouse()
     {
-        theGameManager.buttonPress = true;
+        theGameManager.noButtonPress = true;
     }
 }
