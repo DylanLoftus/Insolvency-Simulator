@@ -11,6 +11,8 @@ TagManager:
   - house2
   - house3
   - house4
+  - pause
+  - RollButton
   layers:
   - Default
   - TransparentFX

@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     public Property currentProperty;
 
+    public PauseMenu menu;
+
     public int NumberOfPlayers = 3;
 
     // To check if the dice is done rolling or not.
@@ -113,6 +115,9 @@ public class GameManager : MonoBehaviour
         doubleRollUI = GameObject.FindObjectOfType<DoubleRollUI>();
         doubleRollUI.gameObject.SetActive(false);
 
+        menu = GameObject.FindObjectOfType<PauseMenu>();
+        menu.gameObject.SetActive(false);
+
         // Get an instance of the ownership class.
         owner = GameObject.FindObjectOfType<Ownership>();
 
@@ -124,6 +129,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menu.gameObject.SetActive(true);
+            GameObject rollButton = GameObject.FindGameObjectWithTag("RollButton");
+            rollButton.gameObject.SetActive(false);
+        }
+
         // If all are true.
         if (IsDoneRolling && IsDoneMoving && IsDoneInteraction)
         {
