@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
     // Instance variables.
     public Tile StartTile;
     public int PlayerID = -1;
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour
     public int jailTurn = 0;
     public int money = 1500;
     public int houseCount = 0;
-    private int doubleCount = 0;
+    public int doubleCount = 0;
     public Tile currentTile;
     public Tile finalTile;
     GameManager theGameManager;
@@ -95,11 +96,8 @@ public class Player : MonoBehaviour
                 else
                 {
                     doubleCount++;
-                    StartCoroutine(theGameManager.RollAgain());
                 }
             }
-
-            theGameManager.doubleRoll = false;
         }
     }
 
@@ -133,4 +131,5 @@ public class Player : MonoBehaviour
         currentTile = finalTile;
         theGameManager.IsDoneMoving = true;
     }
+
 }

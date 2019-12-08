@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using System.IO;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -161,6 +163,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Skips the turn of a player who has lost.
     public void SkipTurn()
     {
         CurrentPlayerID++;
@@ -205,13 +208,14 @@ public class GameManager : MonoBehaviour
     // This method resets all 'Is' values so the player can roll again.
     public IEnumerator RollAgain()
     {
+        IsDoneRolling = false;
+        IsDoneMoving = false;
+        IsDoneInteraction = false;
+        doubleRoll = false;
         doubleRollUI.gameObject.SetActive(true);
         yield return new WaitForSeconds(3);
         doubleRollUI.gameObject.SetActive(false);
         Debug.Log("Rolled a Double! Roll again!");
-        IsDoneRolling = false;
-        IsDoneMoving = false;
-        IsDoneInteraction = false;
     }
 
     // This method checks to see if we're moving the correct player.
@@ -235,6 +239,7 @@ public class GameManager : MonoBehaviour
     {
         if (passedGo == true)
         {
+            player.money += 200;
             passGoUi.gameObject.SetActive(true);
             Debug.Log("PASSED GO!!!!!!!!");
             yield return new WaitForSeconds(3);
@@ -259,7 +264,14 @@ public class GameManager : MonoBehaviour
                 switch (tile.tileType)
                 {
                     case "Go":
-                        IsDoneInteraction = true;
+                        if(doubleRoll == true)
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            IsDoneInteraction = true;
+                        }
                         break;
                     case "Property":
                         StartCoroutine(PropertyHandler(player, tile));
@@ -283,8 +295,14 @@ public class GameManager : MonoBehaviour
                         StartCoroutine(UtilityHandler(player, tile));
                         break;
                     case "Free Parking":
-                        Debug.Log("Nothing happens here.");
-                        IsDoneInteraction = true;
+                        if (doubleRoll == true)
+                        {
+                            StartCoroutine(RollAgain());
+                        }
+                        else
+                        {
+                            IsDoneInteraction = true;
+                        }
                         break;
                     case "Go To Jail":
                         StartCoroutine(GoToJail(player));
@@ -307,6 +325,7 @@ public class GameManager : MonoBehaviour
         chanceCardUI.chanceString = card.chanceAction;
         chanceCardUI.gameObject.SetActive(true);
         yield return new WaitForSeconds(4);
+        IsDoneInteraction = false;
         chanceCardUI.gameObject.SetActive(false);
 
         switch (card.chanceId)
@@ -341,9 +360,14 @@ public class GameManager : MonoBehaviour
                 player.money += 150;
                 break;
         }
-
-        yield return new WaitForSeconds(1);
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // Pulls a community chest card and does the action.
@@ -390,7 +414,14 @@ public class GameManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1);
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // This method checks the ammount of money a player has.
@@ -434,7 +465,8 @@ public class GameManager : MonoBehaviour
 
             if (playerID == player.PlayerID)
             {
-                CheckMonopoly(player);
+                Debug.Log("Checking monopoly");
+                StartCoroutine(CheckMonopoly(player, currentProperty));
             }
             else
             {
@@ -457,10 +489,18 @@ public class GameManager : MonoBehaviour
 
                 player.money -= rent;
                 propOwnedUi.gameObject.SetActive(true);
+                IsDoneInteraction = false;
                 yield return new WaitForSeconds(3);
                 propOwnedUi.gameObject.SetActive(false);
                 Debug.Log(CurrentPlayerMoney);
-                IsDoneInteraction = true;
+                if (doubleRoll == true)
+                {
+                    StartCoroutine(RollAgain());
+                }
+                else
+                {
+                    IsDoneInteraction = true;
+                }
             }
         }
         else
@@ -490,22 +530,32 @@ public class GameManager : MonoBehaviour
                 propUI.gameObject.SetActive(false);
                 propBuy = false;
                 buttonPress = false;
-                IsDoneInteraction = true;
+                if (doubleRoll == true)
+                {
+                    StartCoroutine(RollAgain());
+                }
+                else
+                {
+                    IsDoneInteraction = true;
+                }
             }
         }
     }
 
-    private IEnumerable CheckMonopoly(Player player)
+    public IEnumerator CheckMonopoly(Player player, Property property)
     {
         int ownCount = 0;
-        int propCount = currentProperty.propertyGroup.Length;
+        int propCount = property.propertyGroup.Length;
         Debug.Log("You own this property.");
         // CHECK TO SEE IF MONOPOLY
-        foreach (Property p in currentProperty.propertyGroup)
+        foreach (Property p in property.propertyGroup)
         {
-            if (player.PlayerID == p.playerID)
+            if (p.isOwned)
             {
-                ownCount++;
+                if (player.PlayerID == p.playerID)
+                {
+                    ownCount++;
+                }
             }
         }
 
@@ -516,16 +566,36 @@ public class GameManager : MonoBehaviour
             PropertyOwnMonopoly propMonopComp = GetComponent<PropertyOwnMonopoly>();
 
             timeLeft -= Time.deltaTime;
-            while (noButtonPress == false || currentProperty.houseCount == 4)
+            while (noButtonPress == false)
             {
                 if (timeLeft < 0)
                     buttonPress = true;
                 yield return null;
             }
-
+            if (property.houseCount == 4 || noButtonPress == true)
+            {
+                propMonop.gameObject.SetActive(false);
+                if (doubleRoll == true)
+                {
+                    StartCoroutine(RollAgain());
+                }
+                else
+                {
+                    IsDoneInteraction = true;
+                }
+            }
         }
-
-        IsDoneInteraction = true;
+        else
+        {
+            if (doubleRoll == true)
+            {
+                StartCoroutine(RollAgain());
+            }
+            else
+            {
+                IsDoneInteraction = true;
+            }
+        }
     }
 
     // This method buys the property the player is standing on.
@@ -536,10 +606,17 @@ public class GameManager : MonoBehaviour
         Debug.Log("Paid :" + property.propertyFaceValue);
         Debug.Log("You now have: " + player.money);
         property.isOwned = true;
-        property.playerID = CurrentPlayerID;
+        property.playerID = player.PlayerID;
         buttonPress = false;
         propBuy = false;
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // This method handles all tax tile interactions.
@@ -555,7 +632,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("You've paid 200 to the bank.");
         Debug.Log("You now have: " + player.money);
         yield return new WaitForSeconds(1);
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     public IEnumerator RailRoadHandler(Player player, Tile tile)
@@ -573,7 +657,14 @@ public class GameManager : MonoBehaviour
             if (playerID == player.PlayerID)
             {
                 Debug.Log("You own this railroad");
-                IsDoneInteraction = true;
+                if (doubleRoll == true)
+                {
+                    StartCoroutine(RollAgain());
+                }
+                else
+                {
+                    IsDoneInteraction = true;
+                }
             }
 
             foreach (Player players in playerArray)
@@ -593,7 +684,14 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(3);
             railOwned.gameObject.SetActive(false);
             Debug.Log(CurrentPlayerMoney);
-            IsDoneInteraction = true;
+            if (doubleRoll == true)
+            {
+                StartCoroutine(RollAgain());
+            }
+            else
+            {
+                IsDoneInteraction = true;
+            }
         }
         else
         {
@@ -622,7 +720,14 @@ public class GameManager : MonoBehaviour
                 buyRail.gameObject.SetActive(false);
                 propBuy = false;
                 buttonPress = false;
-                IsDoneInteraction = true;
+                if (doubleRoll == true)
+                {
+                    StartCoroutine(RollAgain());
+                }
+                else
+                {
+                    IsDoneInteraction = true;
+                }
             }
         }
     }
@@ -637,7 +742,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("You now have: " + player.money);
         buttonPress = false;
         propBuy = false;
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // This method handles when a player is in jail.
@@ -652,7 +764,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         jailLanded.gameObject.SetActive(false);
         yield return new WaitForSeconds(1);
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // This method handles all utility tile interactions.
@@ -668,7 +787,14 @@ public class GameManager : MonoBehaviour
         player.money -= utilityTile.utilityPrice;
         Debug.Log("You paid " + utilityTile.utilityName + " " + utilityTile.utilityPrice);
         yield return new WaitForSeconds(1);
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // Sends a player to jail.
@@ -684,7 +810,14 @@ public class GameManager : MonoBehaviour
         Tile jailTile = jailTileObj.GetComponent<Tile>();
         player.currentTile = jailTile;
         Debug.Log("Moved to Jail.");
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // Sends a player to jail from chance card.
@@ -697,7 +830,14 @@ public class GameManager : MonoBehaviour
         Tile jailTile = jailTileObj.GetComponent<Tile>();
         player.currentTile = jailTile;
         Debug.Log("Moved to Jail.");
-        IsDoneInteraction = true;
+        if (doubleRoll == true)
+        {
+            StartCoroutine(RollAgain());
+        }
+        else
+        {
+            IsDoneInteraction = true;
+        }
     }
 
     // Getters and setters for current property.
@@ -714,7 +854,8 @@ public class GameManager : MonoBehaviour
     // Buys a house
     public void BuyHouse()
     {
-        currentProperty.houseCount++;
+        Property currentProp = GetProperty();
+        currentProp.houseCount++;
         Player[] playerArray = GameObject.FindObjectsOfType<Player>();
 
         foreach (Player player in playerArray)
@@ -725,7 +866,7 @@ public class GameManager : MonoBehaviour
                 player.money -= 100;
             }
         }
-        currentProperty.AddHouse();
+        currentProp.AddHouse();
 
     }
 
@@ -763,4 +904,6 @@ public class GameManager : MonoBehaviour
         IsDoneMoving = true;
         IsDoneInteraction = true;
     }
+
+    
 }

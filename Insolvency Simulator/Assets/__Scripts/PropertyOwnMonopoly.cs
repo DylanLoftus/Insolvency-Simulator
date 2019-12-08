@@ -15,28 +15,27 @@ public class PropertyOwnMonopoly : MonoBehaviour
     {
         text = GetComponentInChildren<Text>();
         theGameManager = GameObject.FindObjectOfType<GameManager>();
-        button = GetComponentsInChildren<Button>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(theGameManager.currentProperty.houseCount == 4)
+        if(theGameManager.GetProperty().houseCount == 4)
         {
-            text.text = "You've landed on " + theGameManager.currentProperty.propertyName + "!\n You also have a monopoly!\n You have maximum houses.";
-            foreach(Button b in button)
+            this.gameObject.SetActive(false);
+            if (theGameManager.doubleRoll == true)
             {
-                b.gameObject.SetActive(false);
+                theGameManager.StartCoroutine(theGameManager.RollAgain());
+            }
+            else
+            {
+                theGameManager.IsDoneInteraction = true;
             }
         }
         else
         {
-            foreach (Button b in button)
-            {
-                b.gameObject.SetActive(true);
-            }
-            text.text = "You've landed on " + theGameManager.currentProperty.propertyName + "!\n You also have a monopoly!\n Would you like to purchase a house?";
+            text.text = "You've landed on " + theGameManager.GetProperty().propertyName + "!\n You also have a monopoly!\n Would you like to purchase a house?";
         }
     }
 
