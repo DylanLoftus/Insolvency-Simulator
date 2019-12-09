@@ -18,6 +18,6 @@ public class InJailUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "You are IN JAIL!\n You didn't roll a double.";
+        text.text = "You are IN JAIL! You didn't roll a double.";
     }
 }

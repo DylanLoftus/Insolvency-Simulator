@@ -470,7 +470,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                int rent = ((currentProperty.propertyFaceValue / 100) * 20) + currentProperty.houseCount * 50;
+                int rent = (currentProperty.propertyFaceValue / 100 * 20) + currentProperty.houseCount * 50;
                 propOwnedUi.rent = rent;
 
                 Player[] playerArray = GameObject.FindObjectsOfType<Player>();
@@ -596,6 +596,7 @@ public class GameManager : MonoBehaviour
                 IsDoneInteraction = true;
             }
         }
+        noButtonPress = false;
     }
 
     // This method buys the property the player is standing on.
@@ -758,6 +759,10 @@ public class GameManager : MonoBehaviour
         if (player.isInJail)
         {
             jailLanded.inJail = true;
+        }
+        else
+        {
+            jailLanded.inJail = false;
         }
         Debug.Log("Just visiting :D.");
         jailLanded.gameObject.SetActive(true);
