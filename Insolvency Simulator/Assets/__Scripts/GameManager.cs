@@ -321,7 +321,7 @@ public class GameManager : MonoBehaviour
     {
         int random = Random.Range(0, 7);
         ChanceCard card = chanceCards[random];
-
+        
         chanceCardUI.chanceString = card.chanceAction;
         chanceCardUI.gameObject.SetActive(true);
         yield return new WaitForSeconds(4);
@@ -338,7 +338,11 @@ public class GameManager : MonoBehaviour
                 player.money += 200;
                 break;
             case 2:
-                // TODO: pass go mallarcy  
+                // TODO: pass go mallarcy
+                if(card.tag != "NoGo")
+                {
+                    player.money += 200;
+                }
                 GameObject nunsIslandObj = GameObject.FindGameObjectWithTag("Nun");
                 Tile nunTile = nunsIslandObj.GetComponent<Tile>();
                 player.currentTile = nunTile;

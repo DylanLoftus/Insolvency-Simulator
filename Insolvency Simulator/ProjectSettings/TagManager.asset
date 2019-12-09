@@ -13,6 +13,7 @@ TagManager:
   - house4
   - pause
   - RollButton
+  - NoGo
   layers:
   - Default
   - TransparentFX
